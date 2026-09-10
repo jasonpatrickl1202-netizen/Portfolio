@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website">
+  <title>Portfolio | Your Name</title>
+
+  <!-- Elegant font: Inter + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Floating navigation -->
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" data-scroll>
+      <span>Portfolio</span>
+      <i></i>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home" data-nav="home" data-scroll>Home</a>
+      <a href="#about" data-nav="about" data-scroll>About</a>
+      <a href="#certifications" data-nav="certifications" data-scroll>Certifications</a>
+      <a href="#projects" data-nav="projects" data-scroll>Project</a>
+      <a href="#contact" data-nav="contact" data-scroll>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon">☾</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="section hero-section" id="home">
+      <div class="section-bg bg-home"></div>
+      <div class="container hero-grid reveal">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Available for opportunities</p>
+          <h1>Hello, I'm <span class="gradient-text" id="heroName">Your Name</span>.</h1>
+          <p class="hero-role" id="heroRole">IT Network & Technology Enthusiast</p>
+          <p class="hero-description" id="heroIntro">
+            Welcome to my personal portfolio. Explore my skills, certifications,
+            projects, and the things I am passionate about.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about" data-scroll>Explore Portfolio <span>↗</span></a>
+            <a class="btn btn-ghost" href="#contact" data-scroll>Contact Me</a>
+          </div>
+          <div class="hero-meta">
+            <span>Based in Indonesia</span>
+            <span>•</span>
+            <span>Learning & Building</span>
+          </div>
+        </div>
+
+        <!-- Replace profile.jpg with your own photo -->
+        <div class="profile-wrap">
+          <div class="profile-orbit orbit-one"></div>
+          <div class="profile-orbit orbit-two"></div>
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="assets/profile/profile.jpeg" alt="Profile photo" id="profileImage"
+                   onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-photo');">
+              <div class="photo-placeholder">
+                <span>YOUR<br>PHOTO</span>
+                <small>Replace<br>profile.jpg</small>
+              </div>
+            </div>
+            <div class="profile-caption">
+              <span>Personal Portfolio</span>
+            </div>
+          </div>
+          <div class="floating-chip chip-top">Perfectionist</div>
+          <div class="floating-chip chip-bottom">Curious ✦</div>
+        </div>
+      </div>
+      <div class="scroll-indicator">Scroll to explore <span>↓</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="section-bg bg-about"></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 — About</p>
+          <h2>A little <span class="gradient-text">about me.</span></h2>
+          <p>Exploring networking, technology, and problem solving while building my path toward a career in IT infrastructure.</p>
+        </div>
+
+        <div class="about-layout">
+          <article class="about-box glass-card reveal">
+            <div class="box-number">01</div>
+            <h3>Who I Am</h3>
+            <p id="aboutText">
+              I am an Undergraduate Computer Science student with a strong interest in computer networking and IT infrastructure.
+              I enjoy exploring how networks work, developing my technical knowledge, and continuously turning what 
+              I learn into practical skills.
+            </p>
+            <div class="about-tags" id="aboutTags">
+              <span>Networking</span>
+              <span>Problem Solving</span>
+              <span>Creative</span>
+              <span>Continuous Learning</span>
+            </div>
+          </article>
+
+          <!-- Skill logos are clickable and animated -->
+          <div class="skills-panel reveal">
+            <div class="skills-intro">
+              <span>Tools & Technologies</span>
+              <small>Click a logo to learn more ↗</small>
+            </div>
+
+            <div class="skills-marquee">
+              <div class="skills-track">
+                <a class="skill-logo" href="https://mikrotik.com/" target="_blank" rel="noopener" aria-label="MikroTik">
+                  <span class="logo-mark"><img src="assets/logos/mikrotik-logo.png" alt="MikroTik logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>MikroTik</strong>
+                </a>
+                <a class="skill-logo" href="https://www.cisco.com/" target="_blank" rel="noopener" aria-label="Cisco">
+                  <span class="logo-mark"><img src="assets/logos/cisco-logo.png" alt="Cisco logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>Cisco</strong>
+                </a>
+                <a class="skill-logo" href="https://www.capcut.com/" target="_blank" rel="noopener" aria-label="CapCut">
+                  <span class="logo-mark"><img src="assets/logos/capcut-logo.png" alt="CapCut logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>CapCut</strong>
+                </a>
+                <a class="skill-logo" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener" aria-label="Adobe Photoshop">
+                  <span class="logo-mark"><img src="assets/logos/photoshop-logo.png" alt="Adobe Photoshop logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>Photoshop</strong>
+                </a>
+                <a class="skill-logo" href="https://code.visualstudio.com/" target="_blank" rel="noopener" aria-label="Visual Studio Code">
+                  <span class="logo-mark"><img src="assets/logos/vsc-logo.png" alt="Visual Studio Code logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>VS Code</strong>
+                </a>
+
+                <!-- Duplicate items create a seamless marquee -->
+                <a class="skill-logo" href="https://mikrotik.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                  <span class="logo-mark"><img src="assets/logos/mikrotik-logo.png" alt="MikroTik logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>MikroTik</strong>
+                </a>
+                <a class="skill-logo" href="https://www.cisco.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                  <span class="logo-mark"><img src="assets/logos/cisco-logo.png" alt="Cisco logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>Cisco</strong>
+                </a>
+                <a class="skill-logo" href="https://www.capcut.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                  <span class="logo-mark"><img src="assets/logos/capcut-logo.png" alt="CapCut logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>CapCut</strong>
+                </a>
+                <a class="skill-logo" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                  <span class="logo-mark"><img src="assets/logos/photoshop-logo.png" alt="Adobe Photoshop logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>Photoshop</strong>
+                </a>
+                <a class="skill-logo" href="https://code.visualstudio.com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                  <span class="logo-mark"><img src="assets/logos/vsc-logo.png" alt="Visual Studio Code logo" loading="lazy" referrerpolicy="no-referrer"></span><strong>VS Code</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section certifications-section" id="certifications">
+      <div class="section-bg bg-certifications"></div>
+      <div class="container">
+        <div class="section-heading heading-row reveal">
+          <div>
+            <p class="eyebrow">02 — Certifications</p>
+            <h2>Proof of <span class="gradient-text">learning.</span></h2>
+            <p>Showcase your certificates and explain what you learned.</p>
+          </div>
+          <span class="section-note"></span>
+        </div>
+
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects">
+      <div class="section-bg bg-projects"></div>
+      <div class="container">
+        <div class="section-heading heading-row reveal">
+          <div>
+            <p class="eyebrow">03 — Projects</p>
+            <h2>Things I've <span class="gradient-text">built.</span></h2>
+            <p>These cards are ready for your future projects.</p>
+          </div>
+          <span class="section-note"></span>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="section-bg bg-contact"></div>
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">04 — Contact</p>
+        <h2>Let's connect<br><span class="gradient-text">and create.</span></h2>
+        <p>Feel free to reach out through LinkedIn or email.</p>
+
+        <div class="contact-links">
+          <a class="contact-link" id="linkedinLink" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <span class="contact-icon">in</span>
+            <span><small>LinkedIn</small><strong>Connect with me</strong></span>
+            <span>↗</span>
+          </a>
+          <a class="contact-link" id="emailLink" href="mailto:your@email.com">
+            <span class="contact-icon">@</span>
+            <span><small>Email</small><strong>Send me a message</strong></span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <footer>
+          <span>© <span id="currentYear"></span> <span id="footerName">Your Name</span></span>
+          <span>Designed & built with curiosity.</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Certification Library Modal -->
+  <div class="modal" id="certLibraryModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog library-dialog" role="dialog" aria-modal="true" aria-labelledby="certLibraryTitle">
+      <button class="modal-close" data-close-modal type="button" aria-label="Close">×</button>
+      <p class="eyebrow">Certification Library</p>
+      <h2 id="certLibraryTitle">More <span class="gradient-text">certifications.</span></h2>
+      <div class="library-grid" id="certLibraryGrid"></div>
+    </div>
+  </div>
+
+  <!-- Project Library Modal -->
+  <div class="modal" id="projectLibraryModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog library-dialog" role="dialog" aria-modal="true" aria-labelledby="projectLibraryTitle">
+      <button class="modal-close" data-close-modal type="button" aria-label="Close">×</button>
+      <p class="eyebrow">Project Library</p>
+      <h2 id="projectLibraryTitle">More <span class="gradient-text">projects.</span></h2>
+      <div class="library-grid" id="projectLibraryGrid"></div>
+    </div>
+  </div>
+
+  <!-- Project Detail Modal -->
+  <div class="modal" id="projectDetailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog detail-dialog" role="dialog" aria-modal="true" aria-labelledby="projectDetailTitle">
+      <button class="modal-close" data-close-modal type="button" aria-label="Close">×</button>
+      <div id="projectDetailContent"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

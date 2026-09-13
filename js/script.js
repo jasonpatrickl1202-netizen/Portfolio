@@ -74,17 +74,45 @@ const certifications = [
     "MikroTik RouterOS software and RouterBOARD hardware configuration, management, and troubleshooting.",
     tags: ["MikroTik", "Networking", "RouterOS"]
   },
-
+  {
+    title: "KISI Monthly Offline Education",
+    fullTitle: "Korea Investment & Sekuritas Indonesia Offline Education",
+    date: "Sept 2026",
+    issuer: "PT Korea Investment & Sekuritas Indonesia",
+    images: [
+      "assets/certifications/cert4-a.png",
+      "assets/certifications/cert4-b.png",
+      "assets/certifications/cert4-c.png"
+    ],
+    description: "Attended the monthly education seminar hosted by PT Korea Investment and Sekuritas Indonesia (KISI). "+
+    "The session provided deep insights into current market conditions and Indonesian stock market (IHSG) investment strategies.",
+    tags: ["Finance", "Investment", "Saham"]
+  },
+  {
+  title: "Internship at Dharlist Studio",
+  fullTitle: "Photo & Video Specialist Intern at Dharlist Studio Rembang",
+  date: "Feb - May 2023",
+  issuer: "Dharlist Studio Rembang",
+  images: [
+    "assets/certifications/cert5-a.png",
+    "assets/certifications/cert5-b.png",
+    "assets/certifications/cert5-c.png"
+  ],
+  description: "Served as an end-to-end Photo & Video Specialist during a 3-month internship. " +
+               "Managed client relations, produced multimedia content using Adobe Photoshop and Premiere Pro, " +
+               "and handled digital asset printing operations while achieving official competency certification.",
+  tags: ["Multimedia", "Photography", "Internship"]
+}
   /* EXAMPLES FOR FUTURE CERTIFICATIONS:
   {
-    title: "Certification 4",
+    title: "Certification 5",
     fullTitle: "Full Certification Name",
     date: "2027",
     issuer: "Issuer",
     images: [
-      "assets/certifications/cert4-a.jpg",
-      "assets/certifications/cert4-b.jpg",
-      "assets/certifications/cert4-c.jpg"
+      "assets/certifications/cert5-a.jpg",
+      "assets/certifications/cert5-b.jpg",
+      "assets/certifications/cert5-c.jpg"
     ],
     description: "Description...",
     tags: ["Skill", "Technology"]
@@ -220,8 +248,8 @@ function renderCertifications() {
   const moreCard = `
     <button class="gallery-more-card reveal" id="certMoreCard" type="button" aria-label="Open certification library">
       <span class="more-dots">•••</span>
-      <strong>More Certifications</strong>
-      <small>Open your full certification library</small>
+      <strong>More certifications & activities</strong>
+      <small>Explore the full collection of my milestones</small>
       <span class="more-arrow">↗</span>
     </button>
   `;
@@ -277,7 +305,7 @@ function renderProjects() {
     <button class="gallery-more-card reveal" id="projectMoreCard" type="button" aria-label="Open project library">
       <span class="more-dots">•••</span>
       <strong>More Projects</strong>
-      <small>Open your full project library</small>
+      <small>Explore the full gallery of my work</small>
       <span class="more-arrow">↗</span>
     </button>
   `;
@@ -414,17 +442,41 @@ function renderCertLibrary() {
   library.innerHTML = others.map((cert, offset) => {
     const index = offset + 3;
     return `
-      <div class="library-item" data-cert-library-index="${index}">
-        <h3>${escapeHTML(cert.title)}</h3>
-        <p>${escapeHTML(cert.fullTitle)} · ${escapeHTML(cert.date)}</p>
-      </div>
+      <article class="cert-card" data-cert-index="${index}" style="opacity:1;transform:none;">
+        <div class="cert-media media-click-library" data-cert-library-index="${index}" title="Click to change certificate image">
+          <img src="${cert.images[0]}" alt="${escapeHTML(cert.title)} certificate"
+               onerror="handleImageError(this, '${escapeHTML(cert.title)}')">
+          <div class="media-counter">01 / 0${cert.images.length} • CLICK</div>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">${escapeHTML(cert.issuer)}</span>
+          <h3>${escapeHTML(cert.title)}</h3>
+          <p>${escapeHTML(cert.description)}</p>
+          <div class="card-meta">
+            <span>${escapeHTML(cert.fullTitle)}</span>
+            <span>${escapeHTML(cert.date)}</span>
+          </div>
+        </div>
+      </article>
     `;
   }).join("");
 
-  $$("[data-cert-library-index]", library).forEach(item => {
-    item.addEventListener("click", () => {
-      const cert = certifications[Number(item.dataset.certLibraryIndex)];
-      showCertificatePreview(cert);
+  /* Setup image cycling A → B → C → A for library cards */
+  $$(".media-click-library", library).forEach(media => {
+    let current = 0;
+    const certIndex = Number(media.dataset.certLibraryIndex);
+    const cert = certifications[certIndex];
+    const image = $("img", media);
+    const counter = $(".media-counter", media);
+
+    media.addEventListener("click", () => {
+      current = (current + 1) % cert.images.length;
+      image.style.opacity = "0";
+      setTimeout(() => {
+        image.src = cert.images[current];
+        image.style.opacity = "1";
+        counter.textContent = `${String(current + 1).padStart(2, "0")} / ${cert.images.length} • CLICK`;
+      }, 130);
     });
   });
 }
@@ -460,34 +512,7 @@ function renderProjectLibrary() {
   });
 }
 
-function showCertificatePreview(cert) {
-  /* Simple prompt-style preview using the certification library dialog itself. */
-  const dialog = $("#certLibraryModal .modal-dialog");
-  const oldContent = dialog.innerHTML;
-
-  dialog.innerHTML = `
-    <button class="modal-close" data-close-modal type="button" aria-label="Close">×</button>
-    <p class="eyebrow">${escapeHTML(cert.issuer)}</p>
-    <h2>${escapeHTML(cert.title)}</h2>
-    <div class="detail-media">
-      <img src="${cert.images[0]}" alt="${escapeHTML(cert.title)}"
-           onerror="handleImageError(this, '${escapeHTML(cert.title)}')">
-    </div>
-    <div class="detail-content">
-      <p class="detail-description">${escapeHTML(cert.description)}</p>
-      <div class="detail-list">
-        ${cert.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join("")}
-        <span>Obtained ${escapeHTML(cert.date)}</span>
-      </div>
-    </div>
-  `;
-
-  dialog.querySelector("[data-close-modal]").addEventListener("click", () => {
-    dialog.innerHTML = oldContent;
-    setupModalCloseButtons();
-    renderCertLibrary();
-  });
-}
+/* showCertificatePreview removed — library now renders full cert-cards directly */
 
 /* ============================================================
    10. PROJECT DETAIL MODAL

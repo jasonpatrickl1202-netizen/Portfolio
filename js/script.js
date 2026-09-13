@@ -38,9 +38,9 @@ const certifications = [
     date: "July 2026",
     issuer: "MikroTik",
     images: [
-      "assets/certifications/cert1-a.png",
-      "assets/certifications/cert1-b.png",
-      "assets/certifications/cert1-c.jpg"
+      "assets/certifications/cert1-a.webp",
+      "assets/certifications/cert1-b.webp",
+      "assets/certifications/cert1-c.webp"
     ],
     description: "The MikroTik Certified Routing Engineer (MTCRE) is an advanced certification course that teaches network engineers"+ 
     "how to design, configure, and troubleshoot complex routed networks using MikroTik RouterOS.",
@@ -52,9 +52,9 @@ const certifications = [
     date: "Sept 2026",
     issuer: "Fortinet",
     images: [
-      "assets/certifications/cert2-a.png",
-      "assets/certifications/cert2-b.png",
-      "assets/certifications/cert2-c.png"
+      "assets/certifications/cert2-a.webp",
+      "assets/certifications/cert2-b.webp",
+      "assets/certifications/cert2-c.webp"
     ],
     description: "Fortinet NSE 1 in Cybersecurity is an entry-level foundational certification that provides a basic understanding of"+
     "today's threat landscape and core cybersecurity concepts.",
@@ -66,9 +66,9 @@ const certifications = [
     date: "Dec 2025",
     issuer: "MikroTik",
     images: [
-      "assets/certifications/cert3-a.png",
-      "assets/certifications/cert3-b.jpg",
-      "assets/certifications/cert3-c.jpg"
+      "assets/certifications/cert3-a.webp",
+      "assets/certifications/cert3-b.webp",
+      "assets/certifications/cert3-c.webp"
     ],
     description: "The MikroTik Certified Network Associate (MTCNA) is an entry-level certification course that teaches basic"+
     "MikroTik RouterOS software and RouterBOARD hardware configuration, management, and troubleshooting.",
@@ -80,9 +80,9 @@ const certifications = [
     date: "Sept 2026",
     issuer: "PT Korea Investment & Sekuritas Indonesia",
     images: [
-      "assets/certifications/cert4-a.png",
-      "assets/certifications/cert4-b.png",
-      "assets/certifications/cert4-c.png"
+      "assets/certifications/cert4-a.webp",
+      "assets/certifications/cert4-b.webp",
+      "assets/certifications/cert4-c.webp"
     ],
     description: "Attended the monthly education seminar hosted by PT Korea Investment and Sekuritas Indonesia (KISI). "+
     "The session provided deep insights into current market conditions and Indonesian stock market (IHSG) investment strategies.",
@@ -94,9 +94,9 @@ const certifications = [
   date: "Feb - May 2023",
   issuer: "Dharlist Studio Rembang",
   images: [
-    "assets/certifications/cert5-a.png",
-    "assets/certifications/cert5-b.png",
-    "assets/certifications/cert5-c.png"
+    "assets/certifications/cert5-a.webp",
+    "assets/certifications/cert5-b.webp",
+    "assets/certifications/cert5-c.webp"
   ],
   description: "Served as an end-to-end Photo & Video Specialist during a 3-month internship. " +
                "Managed client relations, produced multimedia content using Adobe Photoshop and Premiere Pro, " +

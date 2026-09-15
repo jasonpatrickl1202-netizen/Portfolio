@@ -125,12 +125,12 @@ portfolio/
 │
 ├── assets/
 │   ├── profile/
-│   │   └── profile.jpeg
+│   │   └── profile.webp
 │   │
 │   ├── certifications/
-│   │   ├── cert1-a.png
-│   │   ├── cert1-b.png
-│   │   ├── cert1-c.png
+│   │   ├── cert1-a.webp
+│   │   ├── cert1-b.webp
+│   │   ├── cert1-c.webp
 │   │   └── ...
 │   │
 │   └── projects/

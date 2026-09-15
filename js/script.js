@@ -75,7 +75,7 @@ const certifications = [
     tags: ["MikroTik", "Networking", "RouterOS"]
   },
   {
-    title: "KISI Monthly Offline Education",
+    title: "KISI Monthly Education",
     fullTitle: "Korea Investment & Sekuritas Indonesia Offline Education",
     date: "Sept 2026",
     issuer: "PT Korea Investment & Sekuritas Indonesia",
@@ -133,18 +133,10 @@ const certifications = [
    ============================================================ */
 const projects = [
   {
-    title: "Portfolio Website",
-    category: "Web Design",
-    image: "assets/projects/project1.png",
-    video: "assets/projects/project1.mp4",
-    description: "A personal portfolio website designed to present skills, certifications, creative work, and future projects in an interactive format.",
-    tags: ["HTML", "CSS", "JavaScript", "UI/UX"]
-  },
-  {
     title: "Network Home Lab",
     category: "Networking",
-    image: "assets/projects/project2.jpg",
-    video: "assets/projects/project2.mp4",
+    image: "assets/projects/project1.jpg",
+    video: "assets/projects/project1.mp4",
     description: "A dedicated home laboratory built to simulate, configure, and test complex network topologies. "+
     "This project highlights hands-on experience with MikroTik, Huawei, and TP-Link hardware, covering advanced routing protocols, "+
     "network segmentation, and security optimization.",
@@ -153,13 +145,13 @@ const projects = [
   {
     title: "Sumba Residence Landing Page",
     category: "Web Design",
-    image: "assets/projects/project3.png",
-    video: "assets/projects/project3.mp4",
+    image: "assets/projects/project2.png",
+    video: "assets/projects/project2.mp4",
     description: "A modern and responsive landing page for Sumba Residence, the first luxury cluster housing project in "+
     "Southwest Sumba, NTT. Built with HTML5 and CSS3 to showcase property details, location highlights, and seamless contact options via "+ 
     "WhatsApp for potential buyers.",
     tags: ["HTML5", "CSS3", "JavaScript", "VSCode"]
-  }
+  },
 
   /* EXAMPLE FOR FUTURE PROJECTS:
   ,
@@ -433,8 +425,8 @@ function renderCertLibrary() {
   if (!others.length) {
     library.innerHTML = `
       <div class="library-item">
-        <h3>More coming soon...</h3>
-        <p>Add a 4th certification object in script.js and it will automatically appear here.</p>
+        <h3>More coming soon..</h3>
+        <p> Stay tuned guys!</p>
       </div>`;
     return;
   }
@@ -488,8 +480,8 @@ function renderProjectLibrary() {
   if (!others.length) {
     library.innerHTML = `
       <div class="library-item">
-        <h3>More coming soon...</h3>
-        <p>Add a 4th project object in script.js and it will automatically appear here.</p>
+        <h3>More coming soon..</h3>
+        <p>Stay tuned guys!</p>
       </div>`;
     return;
   }

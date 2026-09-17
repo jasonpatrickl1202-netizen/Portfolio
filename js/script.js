@@ -11,7 +11,7 @@
    ============================================================ */
 const portfolioData = {
   name: "Jason Patrick Limanto",
-  role: "IT Student | Multi-Certified Network",
+  role: "IT Student | Multi-Certified Network Engineer",
   intro: "Welcome to my personal portfolio. Explore my skills, certifications, projects, and the things I am passionate about.",
   email: "jasonpatrickl1202@gmail.com",
   linkedin: "https://www.linkedin.com/in/jasonpatrickl",

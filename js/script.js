@@ -102,10 +102,26 @@ const certifications = [
                "Managed client relations, produced multimedia content using Adobe Photoshop and Premiere Pro, " +
                "and handled digital asset printing operations while achieving official competency certification.",
   tags: ["Multimedia", "Photography", "Internship"]
-}
+  },
+  {
+    title: "IBM SkillsBuild Certificate & Student Transcript",
+    fullTitle: "Certificate of Accomplishment and Student Transcript for IBM SkillsBuild University Education: IT - AI Agent "+
+    "for Programming",
+    date: "July 2026",
+    issuer: "IBM SkillsBuild x Hacktiv 8",
+    images: [
+      "assets/certifications/cert6-a.webp",
+      "assets/certifications/cert6-b.webp",
+      "assets/certifications/cert6-c.webp"
+    ],
+    description: "This document consists of a Certificate of Accomplishment and a Student Transcript issued to Jason Patrick Limanto "+
+    "for successfully completing the IBM SkillsBuild University Education program, specifically the IT - AI Agent for Programming course.",
+    tags: ["IBMSkillsBuild", "Hacktiv8", "AIAgent"]
+  }
+  
   /* EXAMPLES FOR FUTURE CERTIFICATIONS:
   {
-    title: "Certification 5",
+    title: "Certification..",
     fullTitle: "Full Certification Name",
     date: "2027",
     issuer: "Issuer",

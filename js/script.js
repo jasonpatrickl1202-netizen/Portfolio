@@ -159,16 +159,24 @@ const projects = [
     tags: ["MikroTik", "Huawei", "Network", "Home Lab"]
   },
   {
+    title: "Build an AI Agent with Langflow",
+    category: "AI Agent",
+    image: "assets/projects/project2.webp",
+    video: "assets/projects/project2.mp4",
+    description: "A comprehensive AI agent training program by IBM SkillsBuild and Hacktiv8. Built an end-to-end AI prototype utilizing "+
+    "Large Language Models (LLMs) and automated workflows, achieving a final project score of 91.15.",
+    tags: ["AIAgent", "LLM", "IBM SkillsBuild", "Hacktiv8"]
+  },
+  {
     title: "Sumba Residence Landing Page",
     category: "Web Design",
-    image: "assets/projects/project2.png",
-    video: "assets/projects/project2.mp4",
+    image: "assets/projects/project3.png",
+    video: "assets/projects/project3.mp4",
     description: "A modern and responsive landing page for Sumba Residence, the first luxury cluster housing project in "+
     "Southwest Sumba, NTT. Built with HTML5 and CSS3 to showcase property details, location highlights, and seamless contact options via "+ 
     "WhatsApp for potential buyers.",
     tags: ["HTML5", "CSS3", "JavaScript", "VSCode"]
   },
-
   /* EXAMPLE FOR FUTURE PROJECTS:
   ,
   {

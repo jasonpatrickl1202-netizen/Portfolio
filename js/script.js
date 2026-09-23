@@ -165,7 +165,7 @@ const projects = [
     video: "assets/projects/project2.mp4",
     description: "A comprehensive AI agent training program by IBM SkillsBuild and Hacktiv8. Built an end-to-end AI prototype utilizing "+
     "Large Language Models (LLMs) and automated workflows, achieving a final project score of 91.15.",
-    tags: ["AIAgent", "LLM", "IBM SkillsBuild", "Hacktiv8"]
+    tags: ["AI Agent", "LLM", "IBM SkillsBuild", "Hacktiv8"]
   },
   {
     title: "Sumba Residence Landing Page",
